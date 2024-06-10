@@ -34,5 +34,9 @@ This repository contains a multi-container setup for Minikube, including a Djang
 
 Once everything is deployed, you can access the application through the IP provided by Minikube and the configured Ingress path.
 
+<img width="893" alt="Screenshot 2024-06-10 at 4 02 41 PM" src="https://github.com/warhammer21/multicontainer-minikube/assets/123446783/7e2abc85-9d95-42e5-99b4-ab4881a13e91">
+
+
+
 ```sh
 minikube ip
