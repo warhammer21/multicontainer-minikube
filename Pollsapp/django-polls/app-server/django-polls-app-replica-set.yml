@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: django-polls-rs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django-polls-app
+  template:
+    metadata:
+      labels:
+        app: django-polls-app
+    spec:
+      containers:
+      - image: pythonincontainers/django-polls:http
+        name: app
+        env:
+        - name: DEBUG
+          value: "True"
+        ports:
+        - containerPort: 8000
+          name: django
